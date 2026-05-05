@@ -5,6 +5,7 @@ import { useAuthStore } from '@/store/authStore'
 import { getMyBorrowings, getBooks } from '@/services/bookService'
 import { format, isAfter } from 'date-fns'
 import { id } from 'date-fns/locale'
+import { getBookCoverUrl } from '@/utils/bookUtils'
 
 export default function HomePage() {
   const { profile, user } = useAuthStore()
@@ -24,18 +25,19 @@ export default function HomePage() {
   const currentlyReading = activeBorrowings[0] // Just taking the first one for the hero card
   
   return (
-    <div className="max-w-3xl mx-auto space-y-12">
-      {/* Greeting Section */}
-      <section className="mb-10">
-        <h1 className="font-headline text-4xl font-extrabold tracking-tight text-on-surface leading-tight">
-          Halo, <br/>
-          <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dim">
-            {profile?.full_name?.split(' ')[0] ?? 'Mahasiswa'}
-          </span>!
-        </h1>
-        <p className="font-body text-sm text-on-surface-variant mt-3 max-w-sm">
-          Mari lanjutkan perjalanan akademis Anda hari ini di The Scholarly Curator.
-        </p>
+    <div className="max-w-4xl mx-auto space-y-12">
+      {/* Greeting Section with Hero Banner */}
+      <section className="relative rounded-3xl overflow-hidden shadow-sm border border-primary-100 mb-10 bg-slate-900">
+        <img src="/hero-banner.png" alt="Hero Banner" className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-luminosity" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 to-primary-700/60 mix-blend-multiply"></div>
+        <div className="relative z-10 p-8 md:p-12 text-white">
+          <h1 className="font-headline text-4xl md:text-5xl font-extrabold tracking-tight leading-tight mb-2">
+            Halo, {profile?.full_name?.split(' ')[0] ?? 'Pengguna'}! 👋
+          </h1>
+          <p className="font-body text-base md:text-lg text-primary-100 max-w-lg leading-relaxed">
+            Selamat datang di perpustakaan digital Anda. Temukan ribuan literatur akademik untuk mendukung studi dan riset Anda.
+          </p>
+        </div>
       </section>
 
       {/* Sedang Dibaca (Currently Reading) */}
@@ -49,8 +51,8 @@ export default function HomePage() {
           <div className="relative bg-surface-container-highest rounded-[1.5rem] p-6 ring-1 ring-outline-variant/15 flex flex-col sm:flex-row gap-6 items-start mt-10">
             {/* Overlapping Image */}
             <div className="w-28 h-40 rounded-xl overflow-hidden -mt-12 flex-shrink-0 z-10 ring-1 ring-outline-variant/30 shadow-lg shadow-on-surface/5 bg-surface flex items-center justify-center">
-              {currentlyReading.books?.cover_url ? (
-                <img src={currentlyReading.books.cover_url} alt="Book Cover" className="w-full h-full object-cover" />
+              {getBookCoverUrl(currentlyReading.books) ? (
+                <img src={getBookCoverUrl(currentlyReading.books)} alt="Book Cover" className="w-full h-full object-cover" />
               ) : (
                 <BookOpen size={40} className="text-primary-300" />
               )}
@@ -99,8 +101,8 @@ export default function HomePage() {
           {(booksData?.data || []).map((book) => (
             <Link key={book.id} to={`/books/${book.id}`} className="snap-start flex-shrink-0 w-40 bg-surface-container-low rounded-xl p-4 flex flex-col items-center text-center relative mt-6 ring-1 ring-outline-variant/15 hover:bg-surface-container transition-colors duration-300 group">
               <div className="w-28 h-40 rounded-lg overflow-hidden -mt-10 z-10 shadow-md shadow-on-surface/5 group-hover:-translate-y-1 transition-transform duration-300 bg-surface flex items-center justify-center">
-                {book.cover_url ? (
-                  <img src={book.cover_url} alt="Book Cover" className="w-full h-full object-cover" />
+                {getBookCoverUrl(book) ? (
+                  <img src={getBookCoverUrl(book)} alt="Book Cover" className="w-full h-full object-cover" />
                 ) : (
                   <BookOpen size={30} className="text-primary-300" />
                 )}

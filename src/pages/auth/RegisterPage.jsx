@@ -32,14 +32,22 @@ export default function RegisterPage() {
 
     setIsLoading(true)
     try {
-      await signUp({
+      const result = await signUp({
         email: form.email,
         password: form.password,
         fullName: form.fullName,
         nim: form.nim,
       })
-      toast.success('Pendaftaran berhasil! Silakan cek email untuk verifikasi.')
-      navigate('/login')
+      
+      // If Supabase auto-confirms, session will exist immediately
+      if (result?.session) {
+        toast.success('Pendaftaran berhasil! Selamat datang.')
+        navigate('/')
+      } else {
+        // Email confirmation required
+        toast.success('Pendaftaran berhasil! Silakan cek email untuk verifikasi, lalu login.')
+        navigate('/login')
+      }
     } catch (error) {
       toast.error(error.message ?? 'Gagal mendaftar, coba lagi')
     } finally {

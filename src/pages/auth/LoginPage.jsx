@@ -25,10 +25,12 @@ export default function LoginPage() {
       toast.success('Selamat datang kembali!')
       navigate('/')
     } catch (error) {
-      toast.error(error.message === 'Invalid login credentials'
-        ? 'Email atau password salah'
-        : 'Terjadi kesalahan, coba lagi'
-      )
+      const msg = error.message || 'Terjadi kesalahan, coba lagi'
+      if (msg.includes('Invalid login credentials')) {
+        toast.error('Email atau password salah')
+      } else {
+        toast.error(msg)
+      }
     } finally {
       setIsLoading(false)
     }
@@ -110,13 +112,6 @@ export default function LoginPage() {
           )}
         </button>
       </form>
-      
-      {/* Demo credentials hint */}
-      <div className="mt-4 p-3 bg-primary-50 rounded-xl text-xs text-primary-800 border border-primary-100">
-        <p className="font-semibold mb-1">Demo akun:</p>
-        <p>Admin: admin@amibook.com / admin123</p>
-        <p>User: user@amibook.com / user123</p>
-      </div>
     </>
   )
 }

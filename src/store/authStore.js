@@ -27,7 +27,13 @@ export const useAuthStore = create((set, get) => ({
   // Login dengan email & password
   signIn: async (email, password) => {
     const { data, error } = await supabase.auth.signInWithPassword({ email, password })
-    if (error) throw error
+    if (error) {
+      // Provide more specific error info
+      if (error.message === 'Email not confirmed') {
+        throw new Error('Email belum dikonfirmasi. Cek inbox email Anda.')
+      }
+      throw error
+    }
     return data
   },
 
