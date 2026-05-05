@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profil - AMIBOOK</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#f0e6f6",
+                        "tertiary-dim": "#6d528b",
+                        "primary-dim": "#583e87",
+                        "surface-dim": "#dfd7e5",
+                        "primary-fixed": "#a38de2",
+                        "on-secondary-fixed": "#161b2b",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#6c539f",
+                        "surface-container-high": "#ebe0f1",
+                        "error-dim": "#903c46",
+                        "surface-variant": "#e6ddec",
+                        "primary-container": "#9077c5",
+                        "primary-fixed-dim": "#8b72bf",
+                        "surface-container": "#f6effb",
+                        "tertiary-fixed-dim": "#997fbc",
+                        "secondary-fixed-dim": "#99a2bd",
+                        "surface-tint": "#6c539f",
+                        "surface-container-low": "#fbf6fc",
+                        "on-error-container": "#4a121a",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f1ebf4",
+                        "error": "#b34e5a",
+                        "outline-variant": "#c9bfce",
+                        "on-tertiary-fixed": "#1c0d38",
+                        "on-tertiary-container": "#271644",
+                        "secondary-container": "#a4adcc",
+                        "on-background": "#1e1a24",
+                        "background": "#faf8fb",
+                        "inverse-surface": "#322d39",
+                        "on-surface": "#1e1a24",
+                        "secondary-dim": "#57617b",
+                        "error-container": "#e17985",
+                        "tertiary-fixed": "#b59bda",
+                        "on-primary-fixed": "#130438",
+                        "on-surface-variant": "#49424e",
+                        "on-tertiary-fixed-variant": "#3c2a5c",
+                        "secondary-fixed": "#b4bede",
+                        "surface": "#faf8fb",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#876bac",
+                        "inverse-primary": "#c9b6f8",
+                        "secondary": "#6d7792",
+                        "tertiary-container": "#a287c7",
+                        "surface-bright": "#faf8fb",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f4963",
+                        "on-primary-fixed-variant": "#2a155c",
+                        "outline": "#79717d",
+                        "on-primary-container": "#1e0b4a",
+                        "on-secondary-container": "#1c243e",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .ease-emphasized {
+                transition-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
+            }
+            .ambient-shadow {
+                box-shadow: 0 8px 32px rgba(64,36,69,0.06);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar Shared Component -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 max-w-full mx-auto bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm shadow-purple-900/5 transition-all duration-300 ease-emphasized">
+<button class="text-purple-700 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-all duration-300 ease-emphasized rounded-full p-2 flex items-center justify-center">
+<span class="material-symbols-outlined">language</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-xl text-purple-900 dark:text-purple-100">AMIBOOK</h1>
+<button class="hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-all duration-300 ease-emphasized rounded-full p-1 flex items-center justify-center">
+<div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-purple-700" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<!-- Added bottom padding to clear the BottomNavBar on mobile -->
+<main class="pt-24 pb-32 md:pb-12 px-6 max-w-3xl mx-auto flex flex-col gap-10">
+<!-- Profile Identity Layer (Editorial Asymmetry & Overlap) -->
+<section class="relative mt-12 w-full">
+<!-- Decorative structural background -->
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container-high to-surface-container-low rounded-[2rem] transform -rotate-2 scale-[1.02] -z-10 ambient-shadow"></div>
+<div class="bg-surface-container-low rounded-[2rem] p-8 pb-10 flex flex-col items-center text-center relative z-10">
+<!-- Avatar breaking the container edge -->
+<div class="w-36 h-36 rounded-full p-2 bg-surface-container-lowest ambient-shadow -mt-20 mb-6 relative z-20 transition-transform duration-500 hover:scale-105 ease-emphasized">
+<img alt="Foto Profil Mahasiswa" class="w-full h-full rounded-full object-cover" data-alt="Close up portrait of a young male university student smiling softly, warm natural sunlight, blurred modern campus architecture background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSjMg16aanQkKZLVXFim3i6uKk7uunRLY0Q3t76XP-0KsGEC1ixQFLQDlBVQ3UIau698dmiCbHMinJYbt7wqreyFfrfRbmUTLHGl_32-hkcaAxiPElOeEPkO0zien6i-xMvXS5-cjRHeBAmyfVrVN-rkGfw4x1r3TqvAvkxNAwFe1i91-1WaTrEd_Gr2ysSfWipIT3jiz78jNhHD0Y5lhpNSBfjHdlHop3cjvIL2cPskgldsVHLGePnlYOQTn51bw-5dAan03aOjg"/>
+</div>
+<h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight mb-2">Budi Santoso</h2>
+<div class="flex flex-col items-center gap-1.5">
+<p class="font-body text-base text-on-surface-variant font-semibold tracking-wide">NIM: 202310145</p>
+<div class="mt-2 px-5 py-1.5 bg-primary/10 border border-primary/10 text-primary-dim rounded-full font-label text-sm font-bold uppercase tracking-widest inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">school</span>
+                        Teknik Informatika
+                    </div>
+</div>
+</div>
+</section>
+<!-- Curated Options (Bento Grid Style) -->
+<section class="grid grid-cols-2 gap-4 w-full">
+<!-- Account Settings (Hero Card) -->
+<a class="col-span-2 bg-surface-container-highest rounded-2xl p-6 flex items-center justify-between group transition-all duration-300 hover:scale-[1.01] hover:bg-surface-dim ambient-shadow" href="#">
+<div class="flex items-center gap-5">
+<div class="w-14 h-14 rounded-full bg-primary-container/40 flex items-center justify-center text-primary-dim group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">manage_accounts</span>
+</div>
+<div class="text-left flex flex-col justify-center">
+<h3 class="font-headline text-xl font-bold text-on-surface tracking-tight leading-none mb-1.5">Pengaturan Akun</h3>
+<p class="font-body text-sm text-on-surface-variant font-medium">Kelola profil, kata sandi &amp; privasi</p>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center group-hover:bg-primary-container/50 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</a>
+<!-- Language Preference -->
+<a class="col-span-1 bg-surface-container-low rounded-2xl p-6 flex flex-col justify-between items-start gap-6 group transition-all duration-300 hover:scale-[1.02] hover:bg-surface-container ambient-shadow relative overflow-hidden" href="#">
+<!-- Decorative subtle blur -->
+<div class="absolute -right-4 -top-4 w-20 h-20 bg-secondary-container/30 rounded-full blur-xl transition-all group-hover:bg-secondary-container/50"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary relative z-10">
+<span class="material-symbols-outlined text-[24px]">language</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline text-lg font-bold text-on-surface leading-snug mb-1">Preferensi Bahasa</h3>
+<p class="font-label text-xs text-secondary-dim font-bold uppercase tracking-widest">(ID/EN)</p>
+</div>
+</a>
+<!-- Help & Support -->
+<a class="col-span-1 bg-surface-container-low rounded-2xl p-6 flex flex-col justify-between items-start gap-6 group transition-all duration-300 hover:scale-[1.02] hover:bg-surface-container ambient-shadow relative overflow-hidden" href="#">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-tertiary-container/30 rounded-full blur-xl transition-all group-hover:bg-tertiary-container/50"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-tertiary relative z-10">
+<span class="material-symbols-outlined text-[24px]">help_outline</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-headline text-lg font-bold text-on-surface leading-snug mb-1">Bantuan</h3>
+<p class="font-body text-sm text-on-surface-variant font-medium">FAQ &amp; Dukungan</p>
+</div>
+</a>
+<!-- Logout -->
+<button class="col-span-2 mt-2 bg-error-container/10 border border-error-container/20 rounded-2xl p-5 flex items-center justify-center gap-3 transition-all duration-300 hover:bg-error-container/20 hover:scale-[1.01] group ease-emphasized">
+<span class="material-symbols-outlined text-error-dim group-hover:text-error transition-colors">logout</span>
+<span class="font-headline text-base text-error-dim font-bold tracking-wide group-hover:text-error transition-colors">Keluar</span>
+</button>
+</section>
+</main>
+<!-- BottomNavBar Shared Component -->
+<!-- Visible on mobile, hidden on web (md) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-[2rem] shadow-[0_-8px_32px_rgba(64,36,69,0.06)] transition-all duration-300 ease-emphasized">
+<!-- Tab 1: Beranda -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition-all group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)">home</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-widest">Beranda</span>
+</a>
+<!-- Tab 2: Katalog -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition-all group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)">menu_book</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-widest">Katalog</span>
+</a>
+<!-- Tab 3: Scan -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition-all group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)">qr_code_scanner</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-widest">Scan</span>
+</a>
+<!-- Tab 4: Aktivitas -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 transition-all group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)">history</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-widest">Aktivitas</span>
+</a>
+<!-- Tab 5: Profil (ACTIVE) -->
+<a class="flex flex-col items-center justify-center text-purple-700 dark:text-purple-300 bg-purple-100/50 dark:bg-purple-900/40 rounded-2xl px-3 py-1 transition-transform duration-500 cubic-bezier(0.2,0,0,1)" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-['Manrope'] text-[11px] font-semibold uppercase tracking-widest">Profil</span>
+</a>
+</nav>
+</body></html>

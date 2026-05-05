@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AMIBOOK - Beranda</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#fcceff",
+                        "tertiary-dim": "#624d00",
+                        "primary-dim": "#6032b0",
+                        "surface-dim": "#fac2ff",
+                        "primary-fixed": "#b38bff",
+                        "on-secondary-fixed": "#412075",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#6c40bd",
+                        "surface-container-high": "#fed6ff",
+                        "error-dim": "#a70138",
+                        "surface-variant": "#fcceff",
+                        "primary-container": "#b38bff",
+                        "primary-fixed-dim": "#a67bfa",
+                        "surface-container": "#ffdeff",
+                        "tertiary-fixed-dim": "#eec540",
+                        "secondary-fixed-dim": "#d2b7ff",
+                        "surface-tint": "#6c40bd",
+                        "surface-container-low": "#ffebfc",
+                        "on-error-container": "#510017",
+                        "on-error": "#ffefef",
+                        "inverse-on-surface": "#b691b9",
+                        "error": "#b41340",
+                        "outline-variant": "#c7a1ca",
+                        "on-tertiary-fixed": "#463600",
+                        "on-tertiary-container": "#5c4900",
+                        "secondary-container": "#dec8ff",
+                        "on-background": "#402445",
+                        "background": "#fff3fb",
+                        "inverse-surface": "#1c0323",
+                        "on-surface": "#402445",
+                        "secondary-dim": "#5d3e92",
+                        "error-container": "#f74b6d",
+                        "tertiary-fixed": "#fdd34d",
+                        "on-primary-fixed": "#000000",
+                        "on-surface-variant": "#715075",
+                        "on-tertiary-fixed-variant": "#675200",
+                        "secondary-fixed": "#dec8ff",
+                        "surface": "#fff3fb",
+                        "on-primary": "#f8efff",
+                        "tertiary": "#705900",
+                        "inverse-primary": "#a478f7",
+                        "secondary": "#6a4b9f",
+                        "tertiary-container": "#fdd34d",
+                        "surface-bright": "#fff3fb",
+                        "on-tertiary": "#fff2d4",
+                        "on-secondary-fixed-variant": "#5e3f93",
+                        "on-primary-fixed-variant": "#3a0082",
+                        "outline": "#8e6b91",
+                        "on-primary-container": "#2e006b",
+                        "on-secondary-container": "#553689",
+                        "on-secondary": "#f9efff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Hide scrollbar for horizontal scroll areas */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased selection:bg-tertiary-container selection:text-on-tertiary-container min-h-screen pt-24 pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-sm shadow-purple-900/5 transition-all duration-300">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<button class="text-slate-500 dark:text-slate-400 hover:bg-purple-50 dark:hover:bg-purple-900/30 rounded-full p-2 flex items-center justify-center transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<span class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-xl text-purple-700 dark:text-purple-400 font-extrabold tracking-tighter">AMIBOOK</span>
+<button class="text-slate-500 dark:text-slate-400 hover:bg-purple-50 dark:hover:bg-purple-900/30 rounded-full p-2 flex items-center justify-center transition-all duration-300">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+</div>
+</header>
+<main class="max-w-3xl mx-auto">
+<!-- Greeting Section -->
+<section class="px-6 mb-10">
+<h1 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface leading-tight">Halo, <br/><span class="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dim">Budi Santoso</span>!</h1>
+<p class="font-body text-sm text-on-surface-variant mt-3 max-w-sm">Mari lanjutkan perjalanan akademis Anda hari ini di The Scholarly Curator.</p>
+</section>
+<!-- Sedang Dibaca (Currently Reading) - Editorial Overlap Card -->
+<section class="px-6 mb-16">
+<div class="flex justify-between items-end mb-8">
+<h2 class="font-headline text-2xl font-bold text-on-surface">Sedang Dibaca</h2>
+<span class="material-symbols-outlined text-outline text-xl">auto_stories</span>
+</div>
+<div class="relative bg-surface-container-highest rounded-[1.5rem] p-6 ring-1 ring-outline-variant/15 flex flex-col sm:flex-row gap-6 items-start mt-10">
+<!-- Overlapping Image -->
+<div class="w-28 h-40 rounded-xl overflow-hidden -mt-12 flex-shrink-0 z-10 ring-1 ring-outline-variant/30 shadow-lg shadow-on-surface/5 bg-surface">
+<img alt="Book Cover" class="w-full h-full object-cover" data-alt="close-up of a thick academic textbook with a minimalist beige cover featuring bold serif typography, resting on a clean marble surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyTvJ7AvcLtVJDaQkzOX2vL7b2TSjczFigun-zdkoJw763TopKSWsoOAb2VhDscGfb8h63KXhEpGImT0oWt42c7-eH9I2qdoWw2wP3oTfdBU7K0s6oDDIXG4clObAbeVyYG9FSrY6Y_t4pY5x3sULNUdGkHQhja7q5CYT-BFcoV9Ku0lT17ktDUdH3g5o4SiIU3aIb__CnJW6Rc1YaUad3yO8RcW8eIIkG_8pNVqfs0UUOlPDybBT8RHxgqqZ-cFEBZXGlJ-1wcJU"/>
+</div>
+<div class="flex-1 w-full">
+<span class="inline-block px-3 py-1 bg-surface-container rounded-full text-[10px] font-label font-bold text-primary uppercase tracking-widest mb-2">Sosiologi</span>
+<h3 class="font-headline text-xl font-bold text-on-surface leading-snug">Teori Sosiologi Modern</h3>
+<p class="font-label text-sm text-on-surface-variant mt-1">George Ritzer</p>
+<!-- Progress -->
+<div class="mt-5 flex items-center gap-3">
+<div class="h-2 flex-1 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full w-[45%] relative">
+<div class="absolute inset-0 bg-white/20"></div>
+</div>
+</div>
+<span class="font-label text-xs font-bold text-on-tertiary-container">45%</span>
+</div>
+<button class="mt-6 bg-gradient-to-r from-primary to-primary-dim text-on-primary font-label text-sm font-bold py-3 px-6 rounded-full w-full text-center hover:scale-[1.02] transition-transform duration-300 ease-[cubic-bezier(0.2,0,0,1)]">
+                        Lanjutkan
+                    </button>
+</div>
+</div>
+</section>
+<!-- Rekomendasi Buku (Book Recommendations) - Asymmetric Horizontal Scroll -->
+<section class="mb-14">
+<div class="px-6 mb-8 flex justify-between items-end">
+<h2 class="font-headline text-2xl font-bold text-on-surface">Rekomendasi Buku</h2>
+<a class="font-label text-sm font-bold text-primary hover:text-primary-dim transition-colors" href="#">Lihat Semua</a>
+</div>
+<div class="flex overflow-x-auto gap-5 px-6 pb-4 snap-x snap-mandatory hide-scrollbar">
+<!-- Card 1 -->
+<div class="snap-start flex-shrink-0 w-40 bg-surface-container-low rounded-xl p-4 flex flex-col items-center text-center relative mt-6 ring-1 ring-outline-variant/15 hover:bg-surface-container transition-colors duration-300 group">
+<div class="w-28 h-40 rounded-lg overflow-hidden -mt-10 z-10 shadow-md shadow-on-surface/5 group-hover:-translate-y-1 transition-transform duration-300">
+<img alt="Book Cover" class="w-full h-full object-cover" data-alt="minimalist modern art book cover with abstract geometric shapes in deep purple and gold, resting against a soft pink textured background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtNDvJCKXJX11r0HWb8zGFW6UoJIAOeAZche2P5Zrg_2u_b6er0pSjhEzE2viln-yWmwegdYdU9zAv2J1cuJqfmFipkbTIU3BjojAU8wigJQ6adXn6jKa6WPpT5pQZFgAgeCYfpujJoS2n2F_oHgEarFj4IWdbZK6TcQIUy7gxfq9eQdGi5SiIP7VaoPlASu01rLuVi8bZQCmBA_xPlCLu32QC7Wt7UVhtmKaB1QCZyC0jsxkxVvW9NQyG8hLdkqfJ4UiiGprPdqY"/>
+</div>
+<div class="mt-4 w-full">
+<h3 class="font-headline text-sm font-bold text-on-surface leading-tight line-clamp-2">Pengantar Psikologi Kognitif</h3>
+<p class="font-label text-xs text-on-surface-variant mt-2">Robert J. Sternberg</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="snap-start flex-shrink-0 w-40 bg-surface-container-low rounded-xl p-4 flex flex-col items-center text-center relative mt-6 ring-1 ring-outline-variant/15 hover:bg-surface-container transition-colors duration-300 group">
+<div class="w-28 h-40 rounded-lg overflow-hidden -mt-10 z-10 shadow-md shadow-on-surface/5 group-hover:-translate-y-1 transition-transform duration-300">
+<img alt="Book Cover" class="w-full h-full object-cover" data-alt="thick academic textbook with a dark navy blue cover featuring a subtle debossed compass icon, shot straight on in neutral lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpyUK8KSQGoAAOs3sdbCYFIEIYL02WGdhy0-imXy8iuXeO2xm3dY4bipZFOWesodeJ5Gt_AXh50jVXgZEjIKdQkfTZj7NMZ0qZSeSofQgbV2x0uJMiBEoPeTgaO3cgUaojzkSwf9XDTUrPIFIkl6ajqO0EjmMHOgAoqPs_uPgh7jaXkviQ45UL3YHbzkeqzNjQdOyo7__BvBtnSqYexOeDGzgn9G-vzoGSaVGMqZ0OBLvIHjSs2zz7u2GgtkWE6_w840_tIPBI2qY"/>
+</div>
+<div class="mt-4 w-full">
+<h3 class="font-headline text-sm font-bold text-on-surface leading-tight line-clamp-2">Filsafat Ilmu</h3>
+<p class="font-label text-xs text-on-surface-variant mt-2">Jujun S. Suriasumantri</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="snap-start flex-shrink-0 w-40 bg-surface-container-low rounded-xl p-4 flex flex-col items-center text-center relative mt-6 ring-1 ring-outline-variant/15 hover:bg-surface-container transition-colors duration-300 group">
+<div class="w-28 h-40 rounded-lg overflow-hidden -mt-10 z-10 shadow-md shadow-on-surface/5 group-hover:-translate-y-1 transition-transform duration-300">
+<img alt="Book Cover" class="w-full h-full object-cover" data-alt="vintage literature book with a textured cloth cover in faded burgundy, lying flat on a dark mahogany table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHYYP8d7lwu-Ge-_AHnG788-GC4x_Pg66K47_hU83wPMrzsgBFS8XZfVRJkncgeXbQ2nXIH22lKh4gtXTktftvL9ksCYLvjyuMbQtQSG4ZE_W-ZkgoZ1qNvb-Xxs-0OMsTuc9RjIs0SJTgownpBdEdLp1x0Gsmt7fAKnu0IdexUnehiwPTjstvzKDVRwmHFcQnNI3uLdhDspmqCZoKiTE6wu8t3aymqxsd4KyfqVakuAaq3bnBUsVPzhDPnNnnwtRVc1noHBDxFOY"/>
+</div>
+<div class="mt-4 w-full">
+<h3 class="font-headline text-sm font-bold text-on-surface leading-tight line-clamp-2">Sastra Kontemporer</h3>
+<p class="font-label text-xs text-on-surface-variant mt-2">Budi Darma</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Berita Kampus (Campus News) - Tonal List -->
+<section class="px-6 mb-8">
+<h2 class="font-headline text-2xl font-bold text-on-surface mb-6">Berita Kampus</h2>
+<div class="flex flex-col gap-4">
+<!-- News Item 1 -->
+<div class="bg-surface-container-low rounded-[1.25rem] p-4 flex gap-5 items-center ring-1 ring-outline-variant/10 hover:bg-surface-container transition-colors duration-300 cursor-pointer">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-highest">
+<img alt="Campus Event" class="w-full h-full object-cover" data-alt="wide shot of a modern university library interior with massive glass windows, students studying quietly at long wooden tables surrounded by tall bookshelves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSMh6wiB7MVsxH0cLC5ckn-PAO2SpN8P7uuupLy8x7v39F0_34eGgbfzsdi1o_8PCguwiMpEbKFMLJLTHhm47MzHbsDKVpUk3g9GFiC-EtCmreU9cEPsayKxi6-d1wVBIj8QRe-boBYeIHko4wxGTtrf9wF7ZNgiN88rwN4CL782SMm0oPExUc9-P0CTyUpKKlRd2vN_iRVav5UVVIXuV2cmrSoGSS0iDcezlJQDV1tVMGTmpr66zuNXZ2dO3aOn8FmT4_DuOef9I"/>
+</div>
+<div class="flex-1">
+<span class="text-[10px] font-label font-bold text-tertiary-dim uppercase tracking-widest">Pengumuman</span>
+<h3 class="font-headline text-sm font-bold text-on-surface mt-1 leading-snug">Jadwal Pengembalian Buku Akhir Semester Genap</h3>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</div>
+<!-- News Item 2 -->
+<div class="bg-surface-container-low rounded-[1.25rem] p-4 flex gap-5 items-center ring-1 ring-outline-variant/10 hover:bg-surface-container transition-colors duration-300 cursor-pointer">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container-highest">
+<img alt="Seminar" class="w-full h-full object-cover" data-alt="close up of a person writing in a notebook during an academic lecture, soft overhead lighting emphasizing focus and study" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvzeEOfgVu0Adtk4a3VNbT6ghzqIxobJeSCqtcrU_ifaPjUFZPK7slS-qjIPWeMO9vYIc0VxI9N36_NgFs2Yl4O9G3H2vmDbNkL5DHPrAlgCedVHLCVMD7jj2pcnZCcAThAIpDBB1-9vgqdKTzr6Rem6h6DypZi5vrPh6Tcr0kbKXLwUDHmk551VPWAnfIOMpae2aBWFqMapbH6_RjINKd3iplMZzSAc-kj5WrelcHGUHQHTiEMHx6sdFOkGOKOsFj_gvhUhjskc8"/>
+</div>
+<div class="flex-1">
+<span class="text-[10px] font-label font-bold text-primary uppercase tracking-widest">Seminar</span>
+<h3 class="font-headline text-sm font-bold text-on-surface mt-1 leading-snug">Bedah Buku: Dinamika Politik Lokal bersama Penulis</h3>
+</div>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_-8px_32px_rgba(64,36,69,0.06)] rounded-t-[2rem]">
+<!-- Tab 1: Home (Active) -->
+<a class="flex flex-col items-center justify-center text-purple-700 dark:text-purple-300 bg-purple-100/50 dark:bg-purple-900/40 rounded-2xl px-3 py-1 scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Manrope'] text-[11px] font-semibold mt-1">Home</span>
+</a>
+<!-- Tab 2: Catalog -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400" href="#">
+<span class="material-symbols-outlined text-2xl">library_books</span>
+<span class="font-['Manrope'] text-[11px] font-semibold mt-1">Catalog</span>
+</a>
+<!-- Tab 3: Scan -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400" href="#">
+<span class="material-symbols-outlined text-2xl">qr_code_scanner</span>
+<span class="font-['Manrope'] text-[11px] font-semibold mt-1">Scan</span>
+</a>
+<!-- Tab 4: Activity -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400" href="#">
+<span class="material-symbols-outlined text-2xl">history_edu</span>
+<span class="font-['Manrope'] text-[11px] font-semibold mt-1">Activity</span>
+</a>
+<!-- Tab 5: Profile -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="font-['Manrope'] text-[11px] font-semibold mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

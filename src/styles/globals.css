@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    @apply bg-background text-ink antialiased;
+    font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Manrope', system-ui, sans-serif;
+    @apply text-ink;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-surface-low;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-outline rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-300;
+  }
+}
+
+@layer components {
+  .app-shell {
+    @apply bg-background;
+  }
+
+  .hero-gradient {
+    background-image: linear-gradient(135deg, #6C40BD 0%, #B38BFF 100%);
+  }
+
+  .glass-nav {
+    @apply bg-surface/80 backdrop-blur-xl border border-outline-ghost shadow-glass;
+  }
+
+  /* Reusable button base */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    background-image: linear-gradient(135deg, #6C40BD 0%, #8A5ED8 100%);
+    @apply btn text-white hover:scale-[1.02] focus:ring-primary-400;
+  }
+  .btn-secondary {
+    @apply btn bg-surface-highest text-ink hover:bg-surface-high focus:ring-primary-200;
+  }
+  .btn-danger {
+    @apply btn bg-status-danger text-white hover:brightness-95 focus:ring-red-300;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-ink-muted hover:bg-surface-low focus:ring-primary-200;
+  }
+
+  /* Input */
+  .input {
+    @apply w-full px-3 py-2.5 text-sm rounded-xl bg-surface-container text-ink placeholder-ink-soft focus:outline-none focus:ring-2 focus:ring-primary-300 transition-all;
+    border: 1px solid transparent;
+  }
+  .input:focus {
+    @apply bg-surface-high;
+    border-color: rgba(108, 64, 189, 0.2);
+  }
+
+  /* Card */
+  .card {
+    @apply bg-surface-low rounded-3xl shadow-card;
+    border: 1px solid transparent;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .status-info {
+    @apply bg-primary-100 text-primary-700;
+  }
+  .status-success {
+    background-color: rgba(47, 143, 91, 0.16);
+    @apply text-green-800;
+  }
+  .status-warning {
+    background-color: rgba(185, 119, 31, 0.16);
+    @apply text-amber-800;
+  }
+  .status-danger {
+    background-color: rgba(196, 70, 98, 0.16);
+    @apply text-rose-800;
+  }
+  .status-neutral {
+    @apply bg-surface-container text-ink-muted;
+  }
+
+  .panel-soft {
+    @apply bg-surface-container rounded-3xl;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-ink-muted transition-colors;
+  }
+  .nav-item:hover {
+    @apply bg-surface-low text-ink;
+  }
+  .nav-item-active {
+    @apply bg-primary-100 text-primary-700;
+  }
+}

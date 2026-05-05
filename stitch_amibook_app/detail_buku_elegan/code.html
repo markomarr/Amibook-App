@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AMIBOOK - Book Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#d2b7ff",
+                    "on-primary-container": "#2e006b",
+                    "on-secondary-fixed": "#412075",
+                    "inverse-primary": "#a478f7",
+                    "on-primary-fixed-variant": "#3a0082",
+                    "on-error-container": "#510017",
+                    "primary": "#6c40bd",
+                    "on-primary": "#f8efff",
+                    "primary-container": "#b38bff",
+                    "on-error": "#ffefef",
+                    "on-secondary-fixed-variant": "#5e3f93",
+                    "primary-dim": "#6032b0",
+                    "inverse-on-surface": "#b691b9",
+                    "surface-container": "#ffdeff",
+                    "error": "#b41340",
+                    "inverse-surface": "#1c0323",
+                    "on-background": "#402445",
+                    "surface-dim": "#fac2ff",
+                    "tertiary-fixed": "#fdd34d",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#463600",
+                    "secondary-container": "#dec8ff",
+                    "error-container": "#f74b6d",
+                    "on-secondary-container": "#553689",
+                    "surface-tint": "#6c40bd",
+                    "outline": "#8e6b91",
+                    "background": "#fff3fb",
+                    "on-tertiary": "#fff2d4",
+                    "tertiary": "#705900",
+                    "secondary": "#6a4b9f",
+                    "on-surface": "#402445",
+                    "surface-variant": "#fcceff",
+                    "error-dim": "#a70138",
+                    "primary-fixed-dim": "#a67bfa",
+                    "surface": "#fff3fb",
+                    "on-tertiary-container": "#5c4900",
+                    "on-tertiary-fixed-variant": "#675200",
+                    "outline-variant": "#c7a1ca",
+                    "tertiary-container": "#fdd34d",
+                    "surface-container-low": "#ffebfc",
+                    "tertiary-dim": "#624d00",
+                    "on-secondary": "#f9efff",
+                    "surface-container-high": "#fed6ff",
+                    "tertiary-fixed-dim": "#eec540",
+                    "secondary-fixed": "#dec8ff",
+                    "surface-container-highest": "#fcceff",
+                    "on-surface-variant": "#715075",
+                    "primary-fixed": "#b38bff",
+                    "secondary-dim": "#5d3e92",
+                    "surface-bright": "#fff3fb",
+                    "on-primary-fixed": "#000000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "body": [
+                            "Manrope"
+                    ],
+                    "label": [
+                            "Manrope"
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fff3fb; color: #402445; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl no-border shadow-none bg-surface shadow-sm shadow-purple-900/5 transition-all duration-300 ease-emphasized flex justify-between items-center px-6 py-4">
+<button class="text-purple-700 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/30 p-2 rounded-full flex items-center justify-center transition-all duration-300 ease-emphasized">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<span class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-xl text-purple-900 dark:text-purple-100 tracking-tighter">AMIBOOK</span>
+<button class="text-purple-700 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/30 p-2 rounded-full flex items-center justify-center transition-all duration-300 ease-emphasized">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<main class="pt-24 px-6 md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+<!-- Left Column: Image & Sticky Actions -->
+<div class="md:w-1/3 flex flex-col gap-6 relative">
+<div class="sticky top-28 w-full flex flex-col items-center">
+<div class="w-full max-w-sm aspect-[3/4] bg-surface-container-high rounded-xl shadow-[0_8px_32px_rgba(64,36,69,0.06)] overflow-hidden relative group">
+<img alt="Abstract digital art representing artificial intelligence with glowing circuits and nodes on a dark purple background" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Abstract digital art representing artificial intelligence with glowing circuits and nodes on a dark purple background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyF4TTPT3NnnF4siFJPjP0Df73HNRcRJMDwK6RoLpauGBlRbdE2MDgWmvD64XJSJFbdh5KBaLBHnbhxR0y8Ad2wDCayS5mSbt2lVf4V-h0tye2nTFhQKuk3ND_QjlrsFAYoeJM-RKzxVibjOovwLTNNZHs7Jpz4SVtRFtH93V9Y-wQV1ec0HNu3HGGfRV1z_gK3m1Iy9kpMQVVxkP023RpZvtOKo2OOU4rWjSeUJ6OC73X9iWbSlKJF2xynZlyxn6zVgEEVHkYPUM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-6">
+<button class="bg-surface-container-lowest text-primary px-6 py-2 rounded-full font-label font-bold text-sm flex items-center gap-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span> Preview
+                        </button>
+</div>
+</div>
+<div class="w-full max-w-sm mt-8 hidden md:flex flex-col gap-4">
+<button class="w-full bg-gradient-to-r from-primary to-primary-dim text-on-primary py-4 rounded-full font-headline font-bold text-lg hover:scale-[1.02] transition-transform duration-300 ease-in-out shadow-[0_8px_24px_rgba(108,64,189,0.2)]">
+                        Pinjam Buku
+                    </button>
+<button class="w-full bg-surface-container-highest text-on-primary-container py-4 rounded-full font-headline font-bold text-lg hover:bg-surface-container-high transition-colors duration-300">
+                        Tambah ke Daftar Keinginan
+                    </button>
+</div>
+</div>
+</div>
+<!-- Right Column: Details -->
+<div class="md:w-2/3 flex flex-col gap-10">
+<!-- Header Info -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full font-label font-bold text-xs uppercase tracking-wider">Tersedia</span>
+<span class="text-on-surface-variant font-label text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span> Rak 4B - Informatika
+                    </span>
+</div>
+<h1 class="font-headline font-extrabold text-4xl md:text-5xl lg:text-[3.5rem] leading-tight text-on-surface tracking-tight">Artificial Intelligence untuk Informatika</h1>
+<p class="font-body text-xl text-primary font-medium">Oleh Dr. Budi Susanto, M.Kom.</p>
+<div class="flex items-center gap-6 mt-2 border-t border-outline-variant/15 pt-6">
+<div class="flex flex-col gap-1">
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-wider">Rating</span>
+<div class="flex items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="font-body font-bold text-on-surface ml-1 text-lg">4.8</span>
+<span class="text-on-surface-variant text-sm font-normal">(120 ulasan)</span>
+</div>
+</div>
+<div class="w-px h-10 bg-outline-variant/20"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-wider">Halaman</span>
+<span class="font-body font-bold text-on-surface text-lg">450</span>
+</div>
+<div class="w-px h-10 bg-outline-variant/20"></div>
+<div class="flex flex-col gap-1">
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-wider">Tahun</span>
+<span class="font-body font-bold text-on-surface text-lg">2023</span>
+</div>
+</div>
+</section>
+<!-- Synopsis -->
+<section class="bg-surface-container-low p-8 rounded-xl relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary-container rounded-full blur-3xl opacity-30"></div>
+<h2 class="font-headline font-bold text-2xl text-on-surface mb-4">Sinopsis</h2>
+<p class="font-body text-on-surface-variant leading-relaxed text-base md:text-lg">
+                    Buku ini menyajikan panduan komprehensif mengenai konsep dasar, algoritma, dan aplikasi Artificial Intelligence (AI) khusus dalam konteks teknik informatika. Pembaca akan dibimbing melalui teori dasar machine learning, deep learning, hingga implementasi natural language processing. Disusun dengan pendekatan praktis, buku ini mengintegrasikan studi kasus nyata dan contoh kode Python untuk membantu mahasiswa dan profesional memahami cara membangun sistem cerdas yang scalable dan efisien.
+                </p>
+</section>
+<!-- Book Details Grid -->
+<section>
+<h2 class="font-headline font-bold text-2xl text-on-surface mb-6">Detail Informasi</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/15 flex flex-col gap-1">
+<span class="font-label text-sm text-on-surface-variant">Penerbit</span>
+<span class="font-body font-semibold text-on-surface text-lg">Informatika Press</span>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/15 flex flex-col gap-1">
+<span class="font-label text-sm text-on-surface-variant">ISBN</span>
+<span class="font-body font-semibold text-on-surface text-lg">978-623-1234-56-7</span>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/15 flex flex-col gap-1">
+<span class="font-label text-sm text-on-surface-variant">Bahasa</span>
+<span class="font-body font-semibold text-on-surface text-lg">Indonesia</span>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/15 flex flex-col gap-1">
+<span class="font-label text-sm text-on-surface-variant">Kategori</span>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="bg-surface-container px-3 py-1 rounded-md text-sm font-label text-on-surface">Komputer</span>
+<span class="bg-surface-container px-3 py-1 rounded-md text-sm font-label text-on-surface">AI</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="mt-4">
+<div class="flex justify-between items-end mb-8">
+<h2 class="font-headline font-bold text-2xl text-on-surface">Ulasan Pembaca</h2>
+<button class="text-primary font-label font-bold text-sm hover:underline flex items-center gap-1">
+                        Lihat Semua <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<div class="flex flex-col gap-6">
+<!-- Review 1 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex gap-4">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container font-headline font-bold text-lg shrink-0">
+                            A
+                        </div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline font-bold text-on-surface">Andi Pratama</h4>
+<span class="font-label text-xs text-on-surface-variant">Mahasiswa Teknik Informatika</span>
+</div>
+<div class="flex items-center text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+</div>
+</div>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                                Buku yang sangat membantu untuk memahami dasar-dasar AI. Penjelasannya terstruktur dan contoh kodenya mudah diikuti. Sangat direkomendasikan untuk pemula.
+                            </p>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-low p-6 rounded-xl flex gap-4">
+<div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container font-headline font-bold text-lg shrink-0">
+                            S
+                        </div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline font-bold text-on-surface">Siti Nurhaliza</h4>
+<span class="font-label text-xs text-on-surface-variant">Dosen</span>
+</div>
+<div class="flex items-center text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px]">star</span>
+</div>
+</div>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">
+                                Referensi yang bagus untuk bahan ajar. Materinya update dengan perkembangan AI saat ini. Beberapa bab mungkin perlu pendalaman materi dasar matematika terlebih dahulu.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Mobile Fixed Action Bar (Hidden on md and up) -->
+<div class="fixed bottom-[88px] left-0 w-full bg-surface-container-lowest/90 backdrop-blur-md p-4 border-t border-outline-variant/15 md:hidden z-40 shadow-[0_-8px_24px_rgba(64,36,69,0.04)]">
+<button class="w-full bg-gradient-to-r from-primary to-primary-dim text-on-primary py-3 rounded-full font-headline font-bold text-lg shadow-[0_8px_24px_rgba(108,64,189,0.2)]">
+            Pinjam Buku
+        </button>
+</div>
+<!-- BottomNavBar (Mobile Only based on rules, hidden on md) -->
+<!-- Note: Following semantic shell mandate, this might be suppressed on a deep detail page, but prompt asked for consistent navigation, so including standard bottom nav for mobile -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-[2rem] no-border shadow-[0_-8px_32px_rgba(64,36,69,0.06)] md:hidden">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Manrope'] text-[11px] font-semibold">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-purple-700 dark:text-purple-300 bg-purple-100/50 dark:bg-purple-900/40 rounded-2xl px-3 py-1 scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)">
+<span class="material-symbols-outlined">library_books</span>
+<span class="font-['Manrope'] text-[11px] font-semibold">Catalog</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+<span class="font-['Manrope'] text-[11px] font-semibold">Scan</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-['Manrope'] text-[11px] font-semibold">Activity</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[11px] font-semibold">Profile</span>
+</div>
+</nav>
+</body></html>

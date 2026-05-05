@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AMIBOOK - Masuk</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#f3e8ff",
+                    "tertiary-dim": "#64748b",
+                    "primary-dim": "#7e22ce",
+                    "surface-dim": "#f8fafc",
+                    "primary-fixed": "#d8b4fe",
+                    "on-secondary-fixed": "#334155",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#6b21a8",
+                    "surface-container-high": "#faf5ff",
+                    "error-dim": "#be123c",
+                    "surface-variant": "#f1f5f9",
+                    "primary-container": "#f3e8ff",
+                    "primary-fixed-dim": "#c084fc",
+                    "surface-container": "#f8fafc",
+                    "surface-tint": "#6b21a8",
+                    "surface-container-low": "#ffffff",
+                    "on-background": "#0f172a",
+                    "background": "#f8fafc",
+                    "on-surface": "#0f172a",
+                    "secondary-dim": "#475569",
+                    "on-surface-variant": "#64748b",
+                    "surface": "#f8fafc",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#c084fc",
+                    "secondary": "#334155",
+                    "outline": "#cbd5e1",
+                    "outline-variant": "#e2e8f0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "2xl": "2rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Plus Jakarta Sans", "sans-serif"
+                    ],
+                    "body": [
+                            "Manrope", "sans-serif"
+                    ],
+                    "label": [
+                            "Manrope", "sans-serif"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .ease-emphasized {
+            transition-timing-function: cubic-bezier(0.2, 0.0, 0, 1.0);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="min-h-screen relative overflow-hidden flex flex-col font-body selection:bg-primary/20 selection:text-primary">
+<!-- Ambient Background Depth (Organic Intentionality) -->
+<div class="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-slate-50">
+<div class="absolute top-[-10%] right-[-5%] w-[50vw] h-[50vw] rounded-full bg-purple-200/40 opacity-60 blur-[100px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-indigo-100/40 opacity-40 blur-[120px]"></div>
+</div>
+<!-- Top Corner Language Toggle -->
+<div class="absolute top-6 right-6 md:top-10 md:right-10 z-50">
+<div class="flex items-center gap-4 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full shadow-sm border border-slate-100">
+<span class="font-label text-sm font-bold text-purple-800 cursor-pointer hover:text-purple-600 transition-colors">ID</span>
+<div class="w-[1px] h-4 bg-slate-200"></div>
+<span class="font-label text-sm font-medium text-slate-500 cursor-pointer hover:text-purple-800 transition-colors">EN</span>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="flex-1 flex items-center justify-center p-6 relative z-10 w-full max-w-7xl mx-auto">
+<div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+<!-- Branding / Context Column -->
+<div class="flex flex-col space-y-6 md:pr-8 text-center md:text-left">
+<div class="inline-flex items-center justify-center md:justify-start space-x-3 mb-2">
+<span class="material-symbols-outlined text-purple-800 text-4xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_library</span>
+</div>
+<h1 class="font-headline text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-purple-900 to-purple-600 leading-tight">
+                    AMIBOOK
+                </h1>
+<p class="font-body text-slate-600 text-base md:text-lg max-w-md mx-auto md:mx-0 leading-relaxed">
+                    Akses kurasi literatur akademis eksklusif. Temukan wawasan mendalam untuk mendukung perjalanan riset dan studi Anda.
+                </p>
+<!-- Decorative Scholarly Element -->
+<div class="hidden md:block mt-8 w-24 h-1 bg-gradient-to-r from-purple-600 to-transparent rounded-full"></div>
+</div>
+<!-- Login Form Card (The Layering Principle) -->
+<div class="relative w-full max-w-md mx-auto md:mx-0">
+<!-- Ghost Border Layer -->
+<div class="absolute inset-0 bg-purple-100 rounded-2xl translate-y-3 translate-x-3"></div>
+<div class="bg-white rounded-2xl p-8 md:p-10 shadow-[0_8px_32px_rgba(64,36,69,0.04)] border border-slate-50 relative z-10 flex flex-col space-y-8">
+<div>
+<h2 class="font-headline text-2xl font-bold text-slate-900 mb-1">Selamat Datang</h2>
+<p class="font-body text-sm text-slate-500">Silakan masuk menggunakan kredensial akademik Anda.</p>
+</div>
+<form class="flex flex-col space-y-6" onsubmit="event.preventDefault();">
+<!-- NIM Input -->
+<div class="space-y-2 relative group">
+<label class="block font-label text-sm font-semibold text-slate-700 ml-1" for="nim">NIM</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-purple-700 transition-colors">badge</span>
+<input class="w-full bg-slate-50 border-none rounded-xl pl-12 pr-4 py-3.5 text-slate-900 font-body text-sm focus:bg-white focus:ring-0 transition-all duration-300 ease-emphasized placeholder:text-slate-400" id="nim" name="nim" placeholder="Masukkan Nomor Induk" required="" style="box-shadow: inset 0 0 0 1px transparent; transition: box-shadow 0.3s ease, background-color 0.3s ease;" type="text"/>
+<div class="absolute inset-0 rounded-xl pointer-events-none transition-colors duration-300 ring-1 ring-slate-200 peer-focus:ring-purple-500/50"></div>
+</div>
+</div>
+<!-- Kata Sandi Input -->
+<div class="space-y-2 relative group">
+<label class="block font-label text-sm font-semibold text-slate-700 ml-1" for="password">Kata Sandi</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-purple-700 transition-colors">key</span>
+<input class="w-full bg-slate-50 border-none rounded-xl pl-12 pr-4 py-3.5 text-slate-900 font-body text-sm tracking-widest focus:bg-white focus:ring-0 transition-all duration-300 ease-emphasized placeholder:text-slate-400 placeholder:tracking-normal" id="password" name="password" placeholder="••••••••" required="" style="box-shadow: inset 0 0 0 1px transparent; transition: box-shadow 0.3s ease, background-color 0.3s ease;" type="password"/>
+<div class="absolute inset-0 rounded-xl pointer-events-none transition-colors duration-300 ring-1 ring-slate-200 peer-focus:ring-purple-500/50"></div>
+</div>
+</div>
+<!-- Forgot Password Link -->
+<div class="flex justify-end pt-1">
+<a class="font-label text-sm font-semibold text-purple-700 hover:text-purple-500 transition-colors duration-300 ease-emphasized" href="#">
+                                Lupa kata sandi?
+                            </a>
+</div>
+<!-- Primary Button -->
+<button class="w-full bg-purple-700 text-white rounded-xl py-4 px-8 mt-4 font-label font-bold text-base tracking-wide hover:bg-purple-800 hover:shadow-lg hover:shadow-purple-700/20 active:scale-[0.98] transition-all duration-300 ease-emphasized flex items-center justify-center gap-2" type="submit">
+<span>Masuk</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</main>
+<script>
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.nextElementSibling.classList.replace('ring-slate-200', 'ring-purple-500/50');
+            });
+            input.addEventListener('blur', function() {
+                this.nextElementSibling.classList.replace('ring-purple-500/50', 'ring-slate-200');
+            });
+        });
+    </script>
+</body></html>

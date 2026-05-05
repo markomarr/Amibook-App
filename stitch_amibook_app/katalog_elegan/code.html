@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Katalog Perpustakaan - Universitas Amikom Yogyakarta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#715075",
+                      "on-secondary-container": "#553689",
+                      "on-primary-fixed": "#000000",
+                      "primary-container": "#b38bff",
+                      "primary": "#6c40bd",
+                      "inverse-surface": "#1c0323",
+                      "error-dim": "#a70138",
+                      "on-secondary-fixed-variant": "#5e3f93",
+                      "error-container": "#f74b6d",
+                      "outline-variant": "#c7a1ca",
+                      "outline": "#8e6b91",
+                      "secondary-dim": "#5d3e92",
+                      "secondary-container": "#dec8ff",
+                      "primary-fixed": "#b38bff",
+                      "on-tertiary": "#fff2d4",
+                      "on-tertiary-fixed": "#463600",
+                      "on-error": "#ffefef",
+                      "surface-container-high": "#fed6ff",
+                      "primary-fixed-dim": "#a67bfa",
+                      "inverse-on-surface": "#b691b9",
+                      "surface-bright": "#fff3fb",
+                      "tertiary-fixed-dim": "#eec540",
+                      "secondary-fixed-dim": "#d2b7ff",
+                      "on-tertiary-container": "#5c4900",
+                      "on-secondary-fixed": "#412075",
+                      "error": "#b41340",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#6a4b9f",
+                      "primary-dim": "#6032b0",
+                      "surface-container": "#ffdeff",
+                      "on-primary-container": "#2e006b",
+                      "surface": "#fff3fb",
+                      "inverse-primary": "#a478f7",
+                      "tertiary-container": "#fdd34d",
+                      "secondary-fixed": "#dec8ff",
+                      "surface-tint": "#6c40bd",
+                      "tertiary": "#705900",
+                      "surface-dim": "#fac2ff",
+                      "on-error-container": "#510017",
+                      "surface-container-low": "#ffebfc",
+                      "on-background": "#402445",
+                      "surface-container-highest": "#fcceff",
+                      "on-surface": "#402445",
+                      "background": "#fff3fb",
+                      "tertiary-fixed": "#fdd34d",
+                      "surface-variant": "#fcceff",
+                      "on-secondary": "#f9efff",
+                      "on-primary-fixed-variant": "#3a0082",
+                      "on-primary": "#f8efff",
+                      "on-tertiary-fixed-variant": "#675200",
+                      "tertiary-dim": "#624d00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body": [
+                              "Manrope"
+                      ],
+                      "label": [
+                              "Manrope"
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 antialiased pb-24 md:pb-0 md:pl-80 flex flex-col min-h-screen transition-colors duration-300">
+<!-- Top App Bar (Web / Mobile) -->
+<header class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl docked full-width top-0 z-50 sticky shadow-sm shadow-purple-900/5 transition-all duration-300 ease-emphasized md:hidden">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<button class="text-purple-700 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/30 p-2 rounded-full transition-all duration-300 ease-emphasized">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-xl text-purple-900 dark:text-purple-100">AMIBOOK</h1>
+<button class="text-purple-700 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-900/30 p-2 rounded-full transition-all duration-300 ease-emphasized">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<!-- Navigation Drawer (Web) -->
+<nav class="hidden md:flex bg-white dark:bg-slate-950 h-full w-80 rounded-r-[2rem] border-r border-purple-100 dark:border-purple-900/30 shadow-2xl fixed left-0 top-0 z-40 flex-col py-8 gap-6 transition-colors duration-300">
+<div class="px-6 mb-4">
+<h2 class="text-purple-800 dark:text-purple-400 font-extrabold text-2xl font-headline tracking-tight">AMIBOOK</h2>
+<div class="mt-6 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center text-purple-700 dark:text-purple-300 font-bold text-xl">
+                    UA
+                </div>
+<div>
+<p class="font-bold text-slate-900 dark:text-slate-100">Universitas Amikom</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Yogyakarta Catalog</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col space-y-2 px-4 font-['Plus_Jakarta_Sans'] text-sm">
+<a class="flex items-center gap-4 px-4 py-3 bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-200 font-bold rounded-xl ease-emphasized duration-500 hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">terminal</span>
+                Faculty of Computer Science
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-700 dark:hover:text-purple-300 rounded-xl ease-emphasized duration-500 hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined">account_balance</span>
+                Economics &amp; Social Sciences
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-700 dark:hover:text-purple-300 rounded-xl ease-emphasized duration-500 hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined">architecture</span>
+                Science &amp; Technology
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-700 dark:hover:text-purple-300 rounded-xl ease-emphasized duration-500 hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+                International Programs
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-700 dark:hover:text-purple-300 rounded-xl ease-emphasized duration-500 hover:translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined">school</span>
+                Postgraduate
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 w-full max-w-7xl mx-auto px-6 py-8">
+<!-- Header Section -->
+<div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-4xl md:text-5xl font-headline font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">Katalog Perpustakaan</h1>
+<p class="text-slate-600 dark:text-slate-400 mt-2 max-w-2xl text-lg">Eksplorasi koleksi literatur akademik dan temukan sumber referensi terbaik untuk studi Anda.</p>
+</div>
+</div>
+<!-- Search & Filter Glass Bar -->
+<div class="sticky top-20 md:top-6 z-30 mb-10">
+<div class="bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl p-2 rounded-2xl shadow-sm border border-purple-100 dark:border-purple-900/30 flex items-center gap-3">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full bg-slate-50 dark:bg-slate-900 border-none rounded-xl py-4 pl-12 pr-4 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-purple-500/30 transition-all placeholder:text-slate-400 shadow-inner" placeholder="Cari judul buku, penulis, atau ISBN..." type="text"/>
+</div>
+<button class="bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-400 p-4 rounded-xl flex items-center justify-center hover:bg-purple-200 dark:hover:bg-purple-800/50 transition-colors">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+<!-- Categories / Departments -->
+<div class="mb-12 overflow-x-auto no-scrollbar -mx-6 px-6">
+<div class="flex gap-3 min-w-max pb-4">
+<button class="px-6 py-2.5 rounded-full bg-purple-700 text-white font-medium text-sm whitespace-nowrap shadow-md shadow-purple-700/20">Semua</button>
+<button class="px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-purple-50 dark:hover:bg-slate-700 transition-colors font-medium text-sm whitespace-nowrap shadow-sm border border-purple-100 dark:border-slate-700">Informatika</button>
+<button class="px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-purple-50 dark:hover:bg-slate-700 transition-colors font-medium text-sm whitespace-nowrap shadow-sm border border-purple-100 dark:border-slate-700">Sistem Informasi</button>
+<button class="px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-purple-50 dark:hover:bg-slate-700 transition-colors font-medium text-sm whitespace-nowrap shadow-sm border border-purple-100 dark:border-slate-700">Teknologi Informasi</button>
+<button class="px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-purple-50 dark:hover:bg-slate-700 transition-colors font-medium text-sm whitespace-nowrap shadow-sm border border-purple-100 dark:border-slate-700">Teknik Komputer</button>
+<button class="px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-purple-50 dark:hover:bg-slate-700 transition-colors font-medium text-sm whitespace-nowrap shadow-sm border border-purple-100 dark:border-slate-700">Ilmu Komunikasi</button>
+<button class="px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-purple-50 dark:hover:bg-slate-700 transition-colors font-medium text-sm whitespace-nowrap shadow-sm border border-purple-100 dark:border-slate-700">Hubungan Internasional</button>
+<button class="px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-purple-50 dark:hover:bg-slate-700 transition-colors font-medium text-sm whitespace-nowrap shadow-sm border border-purple-100 dark:border-slate-700">Arsitektur</button>
+</div>
+</div>
+<!-- Book Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Book Card 1 -->
+<article class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm border border-purple-100 dark:border-purple-900/20 hover:shadow-lg hover:shadow-purple-900/5 transition-all duration-300 flex flex-col group">
+<div class="relative w-full aspect-[4/3] mb-5 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900">
+<img alt="Buku AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Cover of an artificial intelligence textbook with glowing blue circuitry lines and abstract code patterns on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1VTXkkYi7-dae3uQry5bWPuwgIoeIxGEyDUaeBJJ5HHlwutxkZ_Em8AXE2V4ryVRe5m5iwgev1KU5_DuqetnWXUfdbxJeYiK7Kr5pW-E3aTBfZoWLyteXE-AICXNi92x0yXcxhHG41Coe-a8I4J0gxPTxeSU8byr9Ox8S3yTS-AoLYCCuv72Hf8g9lJmxsj-5QPFbfoqiF9JVPaWQIfjqLIgTcRyjo2YJcXrEBoFvt3yG8UydkPKYBxNa-C2nVDLEJvHuCc99pHk"/>
+<div class="absolute top-3 right-3 bg-white/95 dark:bg-slate-900/95 backdrop-blur text-purple-700 dark:text-purple-400 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm">
+                        Baru
+                    </div>
+</div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-bold tracking-wide text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-900/30 px-2.5 py-1 rounded-md">FIK - S1 Informatika</span>
+<div class="flex items-center bg-amber-50 dark:bg-amber-900/20 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-sm text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-slate-800 dark:text-slate-200 ml-1 text-sm">4.8</span>
+</div>
+</div>
+<h3 class="font-headline font-bold text-xl text-slate-900 dark:text-slate-100 leading-tight mb-2 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">Artificial Intelligence untuk Informatika</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">Prof. Dr. Ir. Budi Santoso</p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs font-bold tracking-wide uppercase">Tersedia</span>
+</div>
+<button class="bg-purple-50 dark:bg-slate-700 text-purple-700 dark:text-purple-400 hover:bg-purple-100 dark:hover:bg-slate-600 p-2.5 rounded-full transition-colors">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Book Card 2 -->
+<article class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm border border-purple-100 dark:border-purple-900/20 hover:shadow-lg hover:shadow-purple-900/5 transition-all duration-300 flex flex-col group">
+<div class="relative w-full aspect-[4/3] mb-5 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900">
+<img alt="Buku Bisnis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Cover of a business strategy book showing a stylized chess piece on a financial chart background in warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyPq2CmFtQ8BnAps2_-hlkgBGaxHhXs5cs9ubRqHb3iq2-uUVoimfqnSsVjeTlhslo1IUcRsQxfAmhmC_S8sqZXe1P3ypp_Jy38qEYsc3Z1iqaBRghF2Y2EfdL_ws3v_Il9DDp1CeNFSc7h6TFaABID_vf9Bb1hWzcfKNe1uhQfJciES_b3PR9Dyt5BFoRKY_nLC44UXbGfbfJFxgQDDBi6agx5XdHE-3iCWUp7qrUlO6_bSe7TLM6I9Z0XHFdVF1UpXxJR4ZSbkc"/>
+</div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-bold tracking-wide text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-900/30 px-2.5 py-1 rounded-md">FEB - S1 Kewirausahaan</span>
+<div class="flex items-center bg-amber-50 dark:bg-amber-900/20 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-sm text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-slate-800 dark:text-slate-200 ml-1 text-sm">4.5</span>
+</div>
+</div>
+<h3 class="font-headline font-bold text-xl text-slate-900 dark:text-slate-100 leading-tight mb-2 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">Digital Business Stratagem</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">Dr. Andi Wijaya, M.M.</p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex items-center gap-2 text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-900/20 px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span class="text-xs font-bold tracking-wide uppercase">Dipinjam</span>
+</div>
+<button class="bg-purple-50 dark:bg-slate-700 text-purple-700 dark:text-purple-400 hover:bg-purple-100 dark:hover:bg-slate-600 p-2.5 rounded-full transition-colors">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Book Card 3 -->
+<article class="bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-sm border border-purple-100 dark:border-purple-900/20 hover:shadow-lg hover:shadow-purple-900/5 transition-all duration-300 flex flex-col group">
+<div class="relative w-full aspect-[4/3] mb-5 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-900">
+<img alt="Buku Arsitektur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="Cover of a modern architecture book featuring a sleek glass and steel skyscraper reaching into a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVDzRz4Hr3D6CVIk1Ti-vSpRfqbdiRSKJtBpqCxr6oIq6OePJirREyzptRZmMMqzGTqxtnG7Q70DvMj0pgJ9Mfsasy1rAsm0vlK3aE8KA7a3fZoEqp73mSusT75gkUt921YpTwBFj57PvNQqEOMv4E5ksIIbrFAFfqFykq0W1dK_FQjNq4OoKUhJTaERbc0PzU2dspm6S8AXu_DAokU7_YZqYsNJtC2JHuiHRehUY-cpXNCzFfE52xAtLqAIMBTfUkb9kOecrJLdQ"/>
+</div>
+<div class="flex-1 flex flex-col">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xs font-bold tracking-wide text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-900/30 px-2.5 py-1 rounded-md">FST - S1 Arsitektur</span>
+<div class="flex items-center bg-amber-50 dark:bg-amber-900/20 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-sm text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-slate-800 dark:text-slate-200 ml-1 text-sm">4.9</span>
+</div>
+</div>
+<h3 class="font-headline font-bold text-xl text-slate-900 dark:text-slate-100 leading-tight mb-2 group-hover:text-purple-700 dark:group-hover:text-purple-400 transition-colors">Arsitektur Modern di Era Digital</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 font-medium">Ir. Rina Kusuma, M.Arch.</p>
+<div class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-xs font-bold tracking-wide uppercase">Tersedia</span>
+</div>
+<button class="bg-purple-50 dark:bg-slate-700 text-purple-700 dark:text-purple-400 hover:bg-purple-100 dark:hover:bg-slate-600 p-2.5 rounded-full transition-colors">
+<span class="material-symbols-outlined">bookmark_add</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Bottom Nav Bar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl docked full-width bottom-0 rounded-t-[2rem] shadow-[0_-8px_32px_rgba(64,36,69,0.06)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Manrope'] text-[11px] font-semibold mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-purple-700 dark:text-purple-300 bg-purple-100/50 dark:bg-purple-900/40 rounded-2xl px-3 py-1 hover:text-purple-600 dark:hover:text-purple-400 scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">library_books</span>
+<span class="font-['Manrope'] text-[11px] font-semibold mt-1">Catalog</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1) -translate-y-4" href="#">
+<div class="bg-purple-700 text-white p-3 rounded-full shadow-lg shadow-purple-700/30">
+<span class="material-symbols-outlined">qr_code_scanner</span>
+</div>
+<span class="font-['Manrope'] text-[11px] font-semibold mt-1">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-['Manrope'] text-[11px] font-semibold mt-1">Activity</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-purple-600 dark:hover:text-purple-400 scale-110 transition-transform duration-500 cubic-bezier(0.2,0,0,1)" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] text-[11px] font-semibold mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
