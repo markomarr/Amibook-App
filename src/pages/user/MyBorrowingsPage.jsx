@@ -2,7 +2,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { BookOpen, CheckCircle, Clock, AlertCircle, Loader2 } from 'lucide-react'
 import { useAuthStore } from '@/store/authStore'
 import { getMyBorrowings, returnBook } from '@/services/bookService'
-import { getBookCoverUrl } from '@/utils/bookUtils'
+import BookCover from '@/components/shared/BookCover'
 import { format, isAfter, differenceInDays } from 'date-fns'
 import { id as idLocale } from 'date-fns/locale'
 import { useState } from 'react'
@@ -94,11 +94,8 @@ export default function MyBorrowingsPage() {
                 {isOverdue && <div className="absolute left-0 top-0 bottom-0 w-1 bg-rose-500"></div>}
 
                 {/* Cover Image */}
-                <div className="w-24 md:w-32 aspect-[3/4] bg-slate-100 rounded-xl flex-shrink-0 overflow-hidden border border-slate-200/50 shadow-inner">
-                  {getBookCoverUrl(b.books)
-                    ? <img src={getBookCoverUrl(b.books)} alt={b.books.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    : <div className="w-full h-full flex items-center justify-center"><BookOpen size={32} className="text-slate-300" /></div>
-                  }
+                <div className="w-24 md:w-32 flex-shrink-0">
+                  <BookCover book={b.books} size="sm" className="w-24 md:w-32 h-32 md:h-44 group-hover:scale-105 transition-transform duration-500" />
                 </div>
 
                 {/* Content */}

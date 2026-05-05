@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
 import { Search, BookOpen, Filter } from 'lucide-react'
 import { getBooks, getCategories } from '@/services/bookService'
-import { getBookCoverUrl } from '@/utils/bookUtils'
+import BookCover from '@/components/shared/BookCover'
 
 export default function CatalogPage() {
   const [search, setSearch] = useState('')
@@ -109,11 +109,7 @@ export default function CatalogPage() {
           {(data?.data ?? []).map((book) => (
             <article key={book.id} className="bg-white rounded-2xl p-5 shadow-sm border border-primary-100 hover:shadow-lg hover:shadow-primary-900/5 transition-all duration-300 flex flex-col group">
               <Link to={`/books/${book.id}`} className="relative w-full aspect-[3/4] mb-5 rounded-xl overflow-hidden bg-slate-100 flex items-center justify-center">
-                {getBookCoverUrl(book) ? (
-                  <img src={getBookCoverUrl(book)} alt={book.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-                ) : (
-                  <BookOpen size={48} className="text-primary-300" />
-                )}
+                <BookCover book={book} size="lg" className="group-hover:scale-105 transition-transform duration-700 ease-out" />
                 
                 {/* Available Badge as 'Baru' if condition met, using it for something visual */}
                 {book.available_copies > 0 && (
